@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: aqua;
+        color: white;
+      }
+      .holder:nth-child(even) > .holder-title,
+      .holder:nth-child(even) > .holder-desc {
+        background-color: #333;
+        border: 5px solid #777;
+      }
+      .holder:nth-child(odd) > .holder-title,
+      .holder:nth-child(odd) > .holder-desc {
+        background-color: #777;
+        border: 5px solid #333;
+      }
+      .holder-title {
+        height: 10vh;
+      }
+      .holder-desc {
+        height: 20vh;
+        display: none;
+        transform: translateY(0vh);
+        transition: transform 1s ease-out;
+      }
+      .holder:hover .holder-desc {
+        animation: identifier;
+      }
+      @keyframes identifier {
+        0% {
+          transform: translateY(0vh);
+          transition: transform 1s ease-out;
+        }
+        100% {
+          transform: translateY(0vh);
+          transition: transform 1s ease-in;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="main">
+      <div class="container">
+        <div class="holder">
+          <div class="holder-title">abcdef</div>
+          <div class="holder-desc">jkqa234</div>
+        </div>
+        <div class="holder">
+          <div class="holder-title">abcdef</div>
+          <div class="holder-desc">jkqa234</div>
+        </div>
+        <div class="holder">
+          <div class="holder-title">abcdef</div>
+          <div class="holder-desc">jkqa234</div>
+        </div>
+        <div class="holder">
+          <div class="holder-title">abcdef</div>
+          <div class="holder-desc">jkqa234</div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

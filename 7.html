@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      .img {
+        border: 1px solid black;
+        padding: 5px;
+      }
+      img {
+        width: 100%;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div>
+      <p>Họ và Tên: Nguyễn Phú Minh Nhật.</p>
+      <div class="img"><img src="images/rinshan kaihou.png" alt="" /></div>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div> -->
+    <div class="grid">
+      <div><img src="images/rinshan kaihou.png" alt="" /></div>
+      <div><img src="images/rinshan kaihou.png" alt="" /></div>
+      <div><p>Xin chào!</p></div>
+    </div>
+  </body>
+</html>
